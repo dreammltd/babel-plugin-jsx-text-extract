@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-jsx-text-extract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Extract text from JSXText nodes into separate file",
   "license": "MIT",
   "main": "lib/index.js",
