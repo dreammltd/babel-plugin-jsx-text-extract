@@ -16,20 +16,20 @@ $ npm install babel-plugin-jsx-text-extract
 
 ```json
 {
-  "plugins": ["text-extract"]
+  "plugins": ["jsx-text-extract"]
 }
 ```
 
 ### Via CLI
 
 ```sh
-$ babel --plugins text-extract script.js
+$ babel --plugins jsx-text-extract script.js
 ```
 
 ### Via Node API
 
 ```javascript
 require("babel-core").transform("code", {
-  plugins: ["text-extract"]
+  plugins: ["jsx-text-extract"]
 });
 ```
