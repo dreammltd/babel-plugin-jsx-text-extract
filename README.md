@@ -1,11 +1,11 @@
-# babel-plugin-text-extract
+# babel-plugin-jsx-text-extract
 
 Extract text from JSXText nodes into separate file
 
 ## Installation
 
 ```sh
-$ npm install babel-plugin-text-extract
+$ npm install babel-plugin-jsx-text-extract
 ```
 
 ## Usage
