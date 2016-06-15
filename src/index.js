@@ -28,17 +28,20 @@ export default function ({types: t}) {
                     let {reactJsxText, file} = state;
                     let {strings} = reactJsxText;
                     const { filename} = file.opts;
-                    var srcFileName = filename.substr(filename.indexOf('src') + 4).split('/').join('-');
-                    file.log.warn(srcFileName);
+                    var srcFileName = filename.substr(filename.indexOf('src') + 4)
+                        .split('/').join('-')
+                        .replace('.js','')
+                        .toLowerCase();
+
 
                     var contextName = path.parent.type;
                     if (path.parent.type === 'JSXElement') {
                         contextName = path.parent.openingElement.name.name
                     }
-
                     if (path.node.value.trim() == "")
                         return;
-                    contextName = getUniqueName(filename) + '-' + contextName;
+
+                    contextName = getUniqueName(srcFileName) + '-' + contextName;
                     strings[contextName] = path.node.value;
 
                     path.replaceWith(
