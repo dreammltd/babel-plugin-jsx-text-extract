@@ -35,7 +35,7 @@ export default function ({types: t}) {
                     };
                 },
                 exit: function (path, state) {
-                    fs.writeFileSync(exportFilePath, exportPrefix + JSON.stringify(state.reactJsxText.strings));
+                    fs.writeFileSync(exportFilePath, exportPrefix + JSON.stringify(state.reactJsxText.strings, null, "\t"));
                 }
             },
             JSXText: {
